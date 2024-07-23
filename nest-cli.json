@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nestjs-microservices/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/nestjs-microservices/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/nestjs-microservices",
+  "projects": {
+    "nestjs-microservices": {
+      "type": "application",
+      "root": "apps/nestjs-microservices",
+      "entryFile": "main",
+      "sourceRoot": "apps/nestjs-microservices/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nestjs-microservices/tsconfig.app.json"
+      }
+    },
+    "nashville": {
+      "type": "application",
+      "root": "apps/nashville",
+      "entryFile": "main",
+      "sourceRoot": "apps/nashville/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nashville/tsconfig.app.json"
+      }
+    },
+    "gallatin": {
+      "type": "application",
+      "root": "apps/gallatin",
+      "entryFile": "main",
+      "sourceRoot": "apps/gallatin/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gallatin/tsconfig.app.json"
+      }
+    },
+    "ashland": {
+      "type": "application",
+      "root": "apps/ashland",
+      "entryFile": "main",
+      "sourceRoot": "apps/ashland/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ashland/tsconfig.app.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    }
+  }
+}
